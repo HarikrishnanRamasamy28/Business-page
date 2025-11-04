@@ -1,30 +1,28 @@
-/* ----- Stylish enhancements ----- */
-
-/* Global resets & base */
 body {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  background-color: #f8f9fa;
+  /* color: #333; */
+  /* background-color: #135393; */
 }
+
+/*=== topbar ===*/
 .topbar {
   background: #ffffff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-
-  /* position:fixed; */
-    position: sticky;
+  /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+  position: sticky;
   top: 0;
-  z-index: 1000;   /* ensures it stays on top of other content */
+  z-index: 1000;  
   width: 100%;
 }
+
+/*=== header ===*/
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.75rem 1.5rem;
-
-  /* position: fixed; */
+  /* background-color: rgb(134, 161, 191); */
 }
 .header .logo {
   display: flex;
@@ -40,12 +38,9 @@ body {
   font-size: 1.5rem;
   color: #007bff;
 }
-
-
-
 .header .contact {
   text-align: right;
-  color: #555;
+  /* color: #555; */
   display: flex;
   flex-direction: row;
   gap: 30px;
@@ -59,15 +54,18 @@ body {
     margin: 0;
     line-height:1px;
     color: #555;
+    font-weight: bold;
 }
 .header .contact .time>p{
     margin: 0;
     line-height:1px;
     color: #555;
+    font-weight: bold;
+    cursor: pointer;
 }
 .header .contact p {
-  margin: 0;
-  line-height: 1.4;
+  /* margin: 0;
+  line-height: 1.4; */
 }
 .header .contact a {
   color: #007bff;
@@ -80,12 +78,11 @@ body {
 
 
 
-/* Base/desktop nav styling */
+/*=== navbar ===*/
 .navBar {
   display: block;
   background: #007bff;
-
-  /* position: fixed; */
+  padding-left: 150px;
 }
 .navBar .navLinks {
   max-width: 1200px;
@@ -117,7 +114,7 @@ body {
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   color: #007bff;
-  background: #ffffff;
+  /* background: #ffffff; */
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -132,7 +129,7 @@ body {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #ffffff;
+  /* background: #ffffff; */
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   visibility: hidden;
   opacity: 0;
@@ -157,7 +154,7 @@ body {
   font-size: 0.9rem;
 }
 .dropdown-menu li a:hover {
-  background: #f1f1f1;
+  /* background: #f1f1f1; */
 }
 
 /* Hamburger button styling */
@@ -244,57 +241,59 @@ body {
 
 
 
-/* Hero Section */
-.hero {
-  width: 100%;
-  padding: 4rem 1rem;
-  background: #f4f8fb;
+
+/* Hero – Consulting / B2B Centered Copy */
+.hero-consulting {
+  background: url('./images/hero-consulting.jpg') center/cover no-repeat;
+  color: #ffffff;
+  text-align: center;
+  padding: 6rem 1rem;
+  position: relative;
 }
 
-.hero-content {
-  max-width: 1200px;
+.hero-consulting::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.45);   /* dark overlay for readability */
+  z-index: 0;
+}
+
+.hero-consulting .hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  padding: 0 1rem;
 }
 
-.hero-text {
-  flex: 1 1 500px;
-  padding: 1rem;
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
+.hero-consulting h1 {
+  font-size: 2.75rem;
   line-height: 1.2;
-  margin: 0 0 1rem;
-  color: #0d1f44;
+  margin-bottom: 1rem;
+  color: #ffffff;
 }
 
-.hero-text h1 span {
-  color: #007bff;
+.hero-consulting p {
+  font-size: 1.15rem;
+  margin-bottom: 2.5rem;
+  color: #e0e0e0;
 }
 
-.hero-text p {
-  font-size: 1.125rem;
-  margin-bottom: 2rem;
-  color: #555;
-}
-
-.hero-cta .btn {
+.hero-consulting .hero-cta .btn {
   display: inline-block;
   padding: 0.75rem 1.75rem;
   font-size: 1rem;
   border-radius: 4px;
   text-decoration: none;
   transition: background 0.3s, color 0.3s;
-  margin-right: 1rem;
+  margin: 0 0.5rem;
 }
 
 .btn-primary {
   background: #007bff;
-  color: #fff;
+  color: #ffffff;
+  border: none;
 }
 
 .btn-primary:hover {
@@ -302,41 +301,147 @@ body {
 }
 
 .btn-secondary {
-  background: #ffffff;
-  color: #007bff;
-  border: 2px solid #007bff;
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
 }
 
 .btn-secondary:hover {
-  background: #007bff;
-  color: #fff;
+  background: #ffffff;
+  color: #007bff;
 }
 
-.hero-image {
-  flex: 1 1 400px;
-  padding: 1rem;
-  text-align: center;
-}
-
-.hero-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-/* Responsive for mobile */
+/* Mobile responsiveness */
 @media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column-reverse;
+  .hero-consulting h1 {
+    font-size: 2.25rem;
+  }
+  .hero-consulting p {
+    font-size: 1rem;
+  }
+  .hero-consulting .hero-cta .btn {
+    padding: 0.65rem 1.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ================= Footer – Consulting Business Style ================= */
+
+.footer-consulting {
+  background-color:rgb(0, 123, 255);   /* dark navy background */
+  color: #ffffff;
+  padding: 4rem 1rem 2rem;
+  font-family: inherit;
+}
+
+.footer-consulting a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-consulting a:hover,
+.footer-consulting a:focus {
+  color: #79aaff;  /* lighter highlight on hover */
+  text-decoration: underline;
+}
+
+.footer-consulting .footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.footer-consulting .footer-col {
+  flex: 1 1 220px;
+}
+
+.footer-consulting .footer-col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  color: #79aaff;
+}
+
+.footer-consulting .footer-col.about p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.footer-consulting .footer-col.services ul,
+.footer-consulting .footer-col.follow ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-consulting .footer-col.services ul li,
+.footer-consulting .footer-col.follow ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-consulting .footer-col.services ul li a,
+.footer-consulting .footer-col.follow ul li a {
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+.footer-consulting .footer-col.contact p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  margin: 0 0 0.5rem;
+}
+
+.footer-consulting .footer-col.contact p:last-child {
+  margin-bottom: 0;
+}
+
+.footer-consulting .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.8);
+}
+
+.footer-consulting .footer-bottom .legal {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer-consulting .footer-bottom .legal li {
+  margin: 0;
+}
+
+.footer-consulting .footer-bottom .legal li a {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.8);
+}
+
+@media (max-width: 768px) {
+  .footer-consulting .footer-inner {
+    flex-direction: column;
     text-align: center;
   }
-  .hero-text {
-    padding: 0.5rem;
+  .footer-consulting .footer-col {
+    flex: 1 1 100%;
   }
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-  .hero-image {
-    padding: 0.5rem;
+  .footer-consulting .footer-col h4 {
+    margin-bottom: 0.75rem;
   }
 }
