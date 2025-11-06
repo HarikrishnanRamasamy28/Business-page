@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Dashboard</title>
+  <style>
+    :root {
+      --bg-light: #f9fafb;
+      --card-bg: #ffffff;
+      --text-dark: #111827;
+      --text-mid: #4b5563;
+      --accent-blue: #3b82f6;
+      --success-green: #10b981;
+      --warning-yellow: #f59e0b;
+      --danger-red: #ef4444;
+      --radius: 8px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    body {
+      margin:0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .header p {
+      margin-top: 8px;
+      font-size: 1.125rem;
+      color: var(--text-mid);
+    }
+
+    /* Metric cards grid */
+    .grid-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .card .label {
+      font-size: 0.875rem;
+      color: var(--text-mid);
+    }
+    .card .value {
+      font-size: 2.25rem;
+      margin: 12px 0 0;
+      color: var(--text-dark);
+    }
+    .card .change {
+      font-size: 0.875rem;
+      margin-top: 4px;
+      color: var(--success-green);
+    }
+
+    /* Section titles */
+    .section {
+      margin-bottom: 60px;
+    }
+    .section h2 {
+      font-size: 1.75rem;
+      margin:-0 0 16px 0;
+      color: var(--text-dark);
+    }
+
+    /* Chart section */
+    .chart-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+      margin-bottom: 40px;
+    }
+    .chart-card img {
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      margin-top: 16px;
+    }
+
+    /* Breakdown segment grid */
+    .grid-segments {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+      gap: 20px;
+    }
+
+    /* Goal vs actual progress bars */
+    .progress-card {
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .progress-card .goal-label {
+      font-size: 0.875rem;
+      color: var(--text-mid);
+    }
+    .progress-card .progress-bar {
+      width: 100%;
+      background: #e5e7eb;
+      border-radius: var(--radius);
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .progress-card .progress-bar div {
+      height: 12px;
+      background: var(--accent-blue);
+    }
+    .progress-card .goal-value {
+      margin-top: 6px;
+      font-size: 1rem;
+      color: var(--text-dark);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 640px) {
+      .header h1 {
+        font-size: 2rem;
+      }
+      .grid-cards, .grid-segments {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Business Dashboard</h1>
+      <p>Comprehensive view of your key business metrics across functions.</p>
+    </div>
+
+    <!-- Metrics Cards Section -->
+    <div class="grid-cards">
+      <div class="card">
+        <div class="label">Total Customers</div>
+        <div class="value">8,742</div>
+        <div class="change">+4.8% this month</div>
+      </div>
+      <div class="card">
+        <div class="label">Monthly Revenue</div>
+        <div class="value">$ 27.9K</div>
+        <div class="change">+6.2% vs last month</div>
+      </div>
+      <div class="card">
+        <div class="label">New Leads</div>
+        <div class="value">1,125</div>
+        <div class="change">+12.3% this month</div>
+      </div>
+      <div class="card">
+        <div class="label">Conversion Rate</div>
+        <div class="value">7.4%</div>
+        <div class="change" style="color: var(--warning-yellow)">-1.1% vs target</div>
+      </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="section">
+      <h2>Analytics Overview</h2>
+      <div class="chart-card">
+        <div class="label">Revenue Trend (Last 12 months)</div>
+        <img src="https://via.placeholder.com/1000x400.png?text=Revenue+Trend+Chart" alt="Revenue Trend Chart">
+      </div>
+      <div class="chart-card">
+        <div class="label">Customer Acquisition by Channel</div>
+        <img src="https://via.placeholder.com/1000x400.png?text=Acquisition+Chart" alt="Acquisition Chart">
+      </div>
+    </div>
+
+    <!-- Segments / Breakdown Section -->
+    <div class="section">
+      <h2>Breakdowns & Segments</h2>
+      <div class="grid-segments">
+        <div class="chart-card">
+          <div class="label">Revenue by Region</div>
+          <img src="https://via.placeholder.com/600x300.png?text=Revenue+by+Region" alt="Revenue by Region">
+        </div>
+        <div class="chart-card">
+          <div class="label">Top Product Lines</div>
+          <img src="https://via.placeholder.com/600x300.png?text=Top+Product+Lines" alt="Top Product Lines">
+        </div>
+      </div>
+    </div>
+
+    <!-- Goals vs Actual Section -->
+    <div class="section">
+      <h2>Goals vs Actual</h2>
+      <div class="grid-cards">
+        <div class="progress-card">
+          <div class="goal-label">Monthly Target Revenue</div>
+          <div class="progress-bar"><div style="width: 85%"></div></div>
+          <div class="goal-value">$ 25,000 of $ 30,000</div>
+        </div>
+        <div class="progress-card">
+          <div class="goal-label">New Leads Target</div>
+          <div class="progress-bar"><div style="width: 72%"></div></div>
+          <div class="goal-value">810 of 1,125</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alert / Warning Section -->
+    <div class="section">
+      <h2>Alerts & Highlights</h2>
+      <div class="card">
+        <div class="label">Important Notice</div>
+        <div class="value" style="font-size:1rem; color: var(--danger-red);">Conversion rate has dipped under the minimum threshold for the last two weeks.</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="./logo.png" />
   <title>Business</title>
-  <link rel="stylesheet" href="./service.css" />
+  <link rel="stylesheet" href="./blog.css" />
 </head>
 <body>
 
@@ -55,6 +55,186 @@
 
 
 
+<section id="blog-hero" class="blog-hero">
+  <div class="container">
+    <h2 class="hero-title">Insights & Articles</h2>
+    <p class="hero-intro">
+      Dive into our latest posts covering industry trends, expert tips, and actionable advice — all written to help you grow and succeed.
+    </p>
+
+    <!-- Optional category filters/navigation -->
+    <nav class="blog-categories">
+      <ul>
+        <li><a href="#all" class="active">All</a></li>
+        <li><a href="#industry">Industry News</a></li>
+        <li><a href="#how-to">How-To Guides</a></li>
+        <li><a href="#case-studies">Case Studies</a></li>
+        <li><a href="#tips">Tips & Tricks</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<section id="blog-posts" class="blog-posts">
+  <div class="container">
+    <h2 class="section-title">Latest Posts</h2>
+    <p class="section-intro">
+      Explore our latest insights, tips and stories — crafted to help you stay ahead and grow your business.
+    </p>
+    <div class="posts-grid">
+      <!-- Post Card 1 -->
+      <article class="post-card">
+        <img src="thumbnail1.jpg" alt="Post Title 1" class="post-image">
+        <div class="post-content">
+          <div class="post-meta">
+            <span class="post-date">Nov 6, 2025</span>
+            <span class="post-author">by Jane Doe</span>
+            <span class="post-category">Category Name</span>
+          </div>
+          <h3 class="post-title">How to maximise your ROI in 2025</h3>
+          <p class="post-excerpt">Discover smart strategies to boost ROI with minimal upfront investment and smarter processes.</p>
+          <a href="/blog/post-1" class="read-more">Read more →</a>
+        </div>
+      </article>
+
+      <!-- Post Card 2 -->
+      <article class="post-card">
+        <img src="thumbnail2.jpg" alt="Post Title 2" class="post-image">
+        <div class="post-content">
+          <div class="post-meta">
+            <span class="post-date">Oct 28, 2025</span>
+            <span class="post-author">by John Smith</span>
+            <span class="post-category">How-To Guide</span>
+          </div>
+          <h3 class="post-title">Your quick checklist for digital transformation</h3>
+          <p class="post-excerpt">A step-by-step list to help your organisation transition smoothly into digital workflows.</p>
+          <a href="/blog/post-2" class="read-more">Read more →</a>
+        </div>
+      </article>
+       
+      <!-- Post Card 3 -->
+      <article class="post-card">
+        <img src="thumbnail3.jpg" alt="Post Title 3" class="post-image">
+        <div class="post-content">
+          <div class="post-meta">
+            <span class="post-date">Nov 10, 2025</span>
+            <span class="post-author">by Sarah Lee</span>
+            <span class="post-category">Industry Insights</span>
+          </div>
+          <h3 class="post-title">Emerging Trends in AI for Small Businesses</h3>
+          <p class="post-excerpt">Explore how small businesses are leveraging AI tools to gain competitive advantage and streamline operations.</p>
+          <a href="/blog/post-3" class="read-more">Read more →</a>
+        </div>
+      </article>
+
+
+      <!-- Add more post-cards similarly (3rd, 4th, …) -->
+    </div>
+
+    <div class="load-more-wrapper">
+      <button class="load-more">Load More Posts</button>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section id="blog-engagement" class="blog-engagement">
+  <div class="container-main">
+    <!-- Main Content (e.g., blog posts) would be here -->
+    <div class="content-and-sidebar">
+      <div class="content-area">
+        <!-- Here you’d list your posts/cards -->
+        <!-- … -->
+      </div>
+      <aside class="sidebar-alt">
+        <div class="sidebar-alt__inner">
+          <!-- Search -->
+          <section class="widget widget-search">
+            <h4 class="widget-title">Search Articles</h4>
+            <form action="/blog/search" method="get" class="widget-search__form">
+              <input type="search" name="q" placeholder="Search posts…" required>
+              <button type="submit">Go</button>
+            </form>
+          </section>
+
+          <!-- Tag Cloud -->
+          <section class="widget widget-tags">
+            <h4 class="widget-title">Popular Topics</h4>
+            <div class="tag-cloud">
+              <a href="/blog/tag/technology">Technology</a>
+              <a href="/blog/tag/trends">Trends</a>
+              <a href="/blog/tag/startups">Startups</a>
+              <a href="/blog/tag/productivity">Productivity</a>
+              <a href="/blog/tag/design">Design</a>
+            </div>
+          </section>
+
+          <!-- Featured Post -->
+          <section class="widget widget-featured">
+            <h4 class="widget-title">Featured Read</h4>
+            <article class="featured-post">
+              <a href="/blog/post-featured">
+                <img src="featured-thumb.jpg" alt="Featured Post">
+                <div class="featured-post__info">
+                  <h5>How AI Is Reshaping Small Business Strategy</h5>
+                  <time datetime="2025-11-06">Nov 6, 2025</time>
+                </div>
+              </a>
+            </article>
+          </section>
+
+          <!-- Newsletter Signup -->
+          <section class="widget widget-newsletter">
+            <h4 class="widget-title">Stay in the Loop</h4>
+            <p>Subscribe to receive the latest articles and insights straight to your inbox.</p>
+            <form action="/subscribe" method="post" class="widget-newsletter__form">
+              <input type="email" name="email" placeholder="Your email address" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </section>
+        </div>
+      </aside>
+    </div>
+
+    <!-- CTA Section below content & sidebar (or at bottom) -->
+    <div class="cta-section-wrapper">
+      <section id="blog-cta" class="blog-cta">
+        <div class="cta-container">
+          <h2 class="cta-heading">Stay Updated with Our Latest Insights</h2>
+          <p class="cta-subtext">
+            Don’t miss out on our new articles, tips and industry insights. Subscribe now and get them delivered straight to your inbox.
+          </p>
+          <form class="cta-form" action="/subscribe" method="post">
+            <input type="email" name="email" placeholder="Enter your email" required class="cta-email">
+            <button type="submit" class="cta-button">Subscribe for Updates</button>
+          </form>
+          <div class="cta-social">
+            <span>Or follow us:</span>
+            <a href="https://twitter.com/YourHandle" class="social-icon">Twitter</a>
+            <a href="https://linkedin.com/company/YourCompany" class="social-icon">LinkedIn</a>
+            <a href="https://facebook.com/YourPage" class="social-icon">Facebook</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
 
 
 
