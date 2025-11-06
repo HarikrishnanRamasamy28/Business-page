@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" href="./logo.png" />
   <title>Business</title>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./contact.css" />
 </head>
 <body>
 
@@ -36,11 +36,14 @@
               <li><a href="./index.html">Home page 1</a></li>
             </ul>
           </li>
-          <li><a href="./404.html">Team & Achievements</a></li>
-          <li><a href="./404.html">Awards / Certifications</a></li>
-          <li><a href="./blog.html">Blog & FAQs</a></li>
-          <li><a href="./404.html">Log In</a></li>
-          <li class="sign"><button onclick="window.location.href='./contact 2.html'">Contact Us → </button></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./service.html">Services</a></li>
+          <li><a href="./choose.html">Why Choose Us</a></li>
+          <!-- <li><a href="./404.html">Team</a></li> -->
+          <!-- <li><a href="./blog.html">Blog</a></li> -->
+          <li><a href="./dashboard.html">DashBoard</a></li>
+          <li><a href="./login.html">Log In</a></li>
+          <li class="sign"><button onclick="window.location.href='./404.html'">Contact Us → </button></li>
         </ul>
       </div>
     </nav>
@@ -49,6 +52,49 @@
 
 
 
+
+
+
+
+
+
+
+
+<section id="contact-business" class="contact-business">
+  <div class="container">
+    <h2 class="contact-business__title">Get in Touch</h2>
+    <p class="contact-business__intro">We’d love to hear from you. Please reach out using any of the below ways.</p>
+    <div class="contact-business__cards">
+      <div class="contact-business__card">
+        <h3 class="contact-business__card-title">Head Office</h3>
+        <p class="contact-business__card-info">123 Main Street, Chennai, Tamil Nadu, India</p>
+        <p class="contact-business__card-info">Phone: +91 12345 67890</p>
+      </div>
+      <div class="contact-business__card">
+        <h3 class="contact-business__card-title">Email Us</h3>
+        <p class="contact-business__card-info">info@smartrealty.com</p>
+        <p class="contact-business__card-info">support@smartrealty.com</p>
+      </div>
+      <div class="contact-business__card">
+        <h3 class="contact-business__card-title">Business Hours</h3>
+        <p class="contact-business__card-info">Mon – Fri: 9:00 AM – 6:00 PM</p>
+        <p class="contact-business__card-info">Sat: 10:00 AM – 4:00 PM</p>
+      </div>
+    </div>
+    <form class="contact-business__form" action="#" method="post">
+      <label for="cb-name">Your Name</label>
+      <input type="text" id="cb-name" name="name" placeholder="Enter your name" required>
+
+      <label for="cb-email">Your Email</label>
+      <input type="email" id="cb-email" name="email" placeholder="Enter your email" required>
+
+      <label for="cb-message">Message</label>
+      <textarea id="cb-message" name="message" rows="4" placeholder="How can we help?" required></textarea>
+
+      <button type="submit" class="contact-business__btn">Send Message</button>
+    </form>
+  </div>
+</section>
 
 
 
@@ -99,6 +145,6 @@
 
 
 
-  <script src="./script.js"></script>
+  <script src="./about.js"></script>
 </body>
 </html>
