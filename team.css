@@ -317,39 +317,16 @@ span{
 
 .team-section {
   padding: 80px 20px;
-  background-color: #f0f2f5;
+  background-color: rgb(208, 205, 205);
   text-align: center;
   font-family: Arial, sans-serif;
 }
-.team-overview {
-  padding: 60px 20px;
-  background-color: #eef2f7;
-  text-align: center;
-  font-family: Arial, sans-serif;
-}
-
-.team-overview .container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.team-overview h2 {
-  font-size: 36px;
-  color: #1a1a1a;
-  margin-bottom: 20px;
-}
-
-.team-overview p {
-  font-size: 17px;
-  color: #555;
-  line-height: 1.8;
-  margin-bottom: 15px;
-}
-
-
 .team-section .container {
   max-width: 1200px;
   margin: 0 auto;
+    opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlide 0.8s ease-out forwards;
 }
 
 .team-section h2 {
@@ -373,13 +350,24 @@ span{
 
 .team-member {
   width: 260px;
-  background-color: #fff;
+  background-color:rgb(6, 47, 91);
   border-radius: 15px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.1);
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
-}
 
+    /* initial animation */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlide 0.8s ease-out forwards
+}
+/* Animation Keyframes */
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .team-member:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 25px rgba(0,0,0,0.15);
@@ -397,7 +385,22 @@ span{
   border-top-right-radius: 15px;
   transition: transform 0.3s;
 }
+.team-member:hover .member-photo img {
+  transform: scale(1.1);
+}
 
+/* Grid Layout */
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.team-section .container .team-grid .team-member h3, 
+.team-section .container .team-grid .team-member p {
+  color: white;
+}
 .team-member:hover .member-photo img {
   transform: scale(1.1);
 }
@@ -452,13 +455,17 @@ span{
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+/* ✅ Media Query – for screens below 450px */
+@media (max-width: 450px) {
   .team-grid {
     flex-direction: column;
     align-items: center;
   }
   .team-member {
     width: 90%;
+  }
+  h2 {
+    font-size: 28px;
   }
 }
 
@@ -472,7 +479,7 @@ span{
 
 .achievements-section {
   padding: 80px 20px;
-  background-color: #ffffff;
+  background-color:rgb(208, 205, 205);
   text-align: center;
   font-family: Arial, sans-serif;
 }
@@ -526,7 +533,7 @@ span{
 }
 
 .stat-card {
-  background-color: #f7f7f7;
+  background-color:rgb(6, 47, 91) ;
   border-radius: 12px;
   padding: 40px 20px;
   width: 200px;
@@ -542,19 +549,68 @@ span{
 .stat-card h3 {
   font-size: 36px;
   margin-bottom: 10px;
-  color: #007bff;
+  color: white;
+  text-shadow: 1px 1px 5px ;
+    /* Pulse animation settings */
+  animation: pulse 2s ease-in-out infinite;
 }
-
+/* Define pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
 .stat-card p {
-  font-size: 16px;
-  color: #555;
+  font-size: 18px;
+  color: white;
+  text-shadow: 1px 1px 3px ;
+    /* Pulse animation settings */
+  animation: pulse 2s ease-in-out infinite;
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+/* ✅ Media Query for screens below 450px */
+@media (max-width: 450px) {
+  .achievements-section {
+    padding: 50px 15px;
+  }
+
+  .achievements-overview h2,
+  .achievements-section h2 {
+    font-size: 26px;
+  }
+
+  .achievements-overview p,
+  .achievements-section p {
+    font-size: 15px;
+  }
+
   .stats-grid {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
+  }
+
+  .stat-card {
+    width: 90%;
+    padding: 25px 15px;
+  }
+
+  .stat-card h3 {
+    font-size: 28px;
+  }
+
+  .stat-card p {
+    font-size: 16px;
   }
 }
 

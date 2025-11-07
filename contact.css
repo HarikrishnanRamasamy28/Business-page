@@ -317,91 +317,206 @@ span{
 
 
 
-/* Contact Business Section */
-.contact-business {
-  padding: 60px 20px;
-  background-color:rgb(208, 205, 205);
-  color: #333;
-}
-.contact-business__title {
+.contact-business-section {
+  padding: 80px 20px;
+  background:rgb(208, 205, 205);
+  font-family: "Poppins", Arial, sans-serif;
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-.contact-business__intro {
-  text-align: center;
-  font-size: 1.1rem;
-  margin-bottom: 40px;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.contact-business__cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 50px;
-}
-.contact-business__card {
-  flex: 1 1 30%;
-  background-color: #fff;
-  padding: 30px;
-  margin: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  border-radius: 8px;
-}
-.contact-business__card-title {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-}
-.contact-business__card-info {
-  font-size: 1rem;
-  margin-bottom: 8px;
-}
-.contact-business__form {
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.contact-business__form label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 500;
-}
-.contact-business__form input,
-.contact-business__form textarea {
-  width: 100%;
-  padding: 12px 14px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-family: inherit;
-}
-.contact-business__btn {
-  display: inline-block;
-  padding: 14px 28px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #fff;
-  background-color: #0070f3;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color .3s ease;
-}
-.contact-business__btn:hover {
-  background-color: #005bb5;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .contact-business__cards {
-    flex-direction: column;
+.contact-business-section .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-business-section h2 {
+  font-size: 32px;
+  color:black;
+  margin-bottom: 15px;
+}
+
+.contact-business-section p {
+  font-size: 17px;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Info Cards */
+.contact-info {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background: rgb(6, 47, 91);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  text-align: left;
+}
+
+.info-card h3 {
+  font-size: 20px;
+  color:white;
+  text-decoration: underline;
+  margin-bottom: 8px;
+}
+
+.info-card p {
+  font-size: 15px;
+  color: white;
+  line-height: 1.5;
+}
+
+.info-card a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.info-card a:hover {
+  color: #007bff;
+}
+
+/* Form */
+.contact-form {
+  flex: 1 1 400px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+.contact-form .form-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.contact-form label {
+  font-size: 18px;
+  color:rgb(6, 47, 91) ;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgb(6, 47, 91);
+  border-radius: 6px;
+  font-size: 15px;
+  color: #333;
+  resize: vertical;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.btn-submit {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight:bold;
+  border: none;
+  /* border-radius: 6px; */
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-submit:hover {
+  background:red;
+  transform: translateY(-2px);
+}
+/* Initial Animation Keyframes */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
   }
-  .contact-business__card {
-    flex: 1 1 100%;
-    margin: 10px 0;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animations to elements */
+.contact-business-section h2,
+.contact-business-section p,
+.contact-wrapper {
+  opacity: 0;
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+
+/* Delay animations slightly for sequence effect */
+.contact-business-section h2 {
+  animation-delay: 0.2s;
+}
+.contact-business-section p {
+  animation-delay: 0.5s;
+}
+.contact-wrapper {
+  animation-delay: 0.8s;
+}
+
+/* Optional: Fade-in cards individually */
+.info-card,
+.contact-form {
+  opacity: 0;
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+
+.info-card:nth-child(1) { animation-delay: 1s; }
+.info-card:nth-child(2) { animation-delay: 1.2s; }
+.info-card:nth-child(3) { animation-delay: 1.4s; }
+.contact-form { animation-delay: 1.6s; }
+
+/* Responsive (for small screens) */
+@media (max-width: 450px) {
+  .contact-business-section {
+    padding: 50px 15px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .info-card,
+  .contact-form {
+    width: 100%;
+  }
+
+  .contact-form {
+    padding: 20px 15px;
+  }
+
+  .contact-business-section h2 {
+    font-size: 26px;
+  }
+
+  .contact-business-section p {
+    font-size: 15px;
+  }
+
+  .btn-submit {
+    width: 100%;
+    font-size: 15px;
   }
 }
 

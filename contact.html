@@ -55,48 +55,55 @@
 
 
 
-
-
-
-
-
-<section id="contact-business" class="contact-business">
+<section id="contact-business" class="contact-business-section">
   <div class="container">
-    <h2 class="contact-business__title">Get in Touch</h2>
-    <p class="contact-business__intro">We’d love to hear from you. Please reach out using any of the below ways.</p>
-    <div class="contact-business__cards">
-      <div class="contact-business__card">
-        <h3 class="contact-business__card-title">Head Office</h3>
-        <p class="contact-business__card-info">123 Main Street, Chennai, Tamil Nadu, India</p>
-        <p class="contact-business__card-info">Phone: +91 12345 67890</p>
+    <h2>Get in <span>Touch</span> With <span>Our Team</span></h2>
+    <p>
+      Whether you’re ready to start a project, have questions, or want to learn more about our services — we’re here to help.
+    </p>
+
+    <div class="contact-wrapper">
+      <!-- Contact Info Column -->
+      <div class="contact-info">
+        <div class="info-card">
+          <h3>Head Office</h3>
+          <p>123 Your Street,<br>Chennai, Tamil Nadu, India</p>
+        </div>
+        <div class="info-card">
+          <h3>Email Us</h3>
+          <p><a href="mailto:hello@yourcompany.com">hello@yourcompany.com</a></p>
+        </div>
+        <div class="info-card">
+          <h3>Call Us</h3>
+          <p>+91 12345 67890<br>+91 98765 43210</p>
+        </div>
       </div>
-      <div class="contact-business__card">
-        <h3 class="contact-business__card-title">Email Us</h3>
-        <p class="contact-business__card-info">info@smartrealty.com</p>
-        <p class="contact-business__card-info">support@smartrealty.com</p>
-      </div>
-      <div class="contact-business__card">
-        <h3 class="contact-business__card-title">Business Hours</h3>
-        <p class="contact-business__card-info">Mon – Fri: 9:00 AM – 6:00 PM</p>
-        <p class="contact-business__card-info">Sat: 10:00 AM – 4:00 PM</p>
+
+      <!-- Contact Form Column -->
+      <div class="contact-form">
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Subject">
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
       </div>
     </div>
-    <form class="contact-business__form" action="#" method="post">
-      <label for="cb-name">Your Name</label>
-      <input type="text" id="cb-name" name="name" placeholder="Enter your name" required>
-
-      <label for="cb-email">Your Email</label>
-      <input type="email" id="cb-email" name="email" placeholder="Enter your email" required>
-
-      <label for="cb-message">Message</label>
-      <textarea id="cb-message" name="message" rows="4" placeholder="How can we help?" required></textarea>
-
-      <button type="submit" class="contact-business__btn">Send Message</button>
-    </form>
   </div>
 </section>
-
-
 
 
 
